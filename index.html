@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mario Olivares | Landing pages espectaculares que Google encuentra</title>
+<meta name="description" content="Diseño y desarrollo landing pages con looks espectaculares, animaciones cuidadas y SEO técnico para que tu negocio aparezca en Google. Desarrollador Frontend Senior.">
+<link rel="canonical" href="https://mario-olivares.netlify.app/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mario Olivares | Que tu negocio sea encontrado">
+<meta property="og:description" content="Landing pages espectaculares, rápidas y listas para Google.">
+<meta property="og:url" content="https://mario-olivares.netlify.app/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0a0a0f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230a0a0f'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23d4ff3a'/%3E%3Ccircle cx='16' cy='16' r='10' fill='none' stroke='%23d4ff3a' stroke-opacity='.5' stroke-width='1.5'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"ProfessionalService","@id":"https://mario-olivares.netlify.app/#service","name":"Mario Olivares — Landing pages","url":"https://mario-olivares.netlify.app/","email":"meolivares06@gmail.com","description":"Diseño y desarrollo de landing pages con animaciones y SEO técnico para negocios locales.","founder":{"@id":"https://mario-olivares.netlify.app/#mario"},"knowsLanguage":["es","pt","en"],"areaServed":"Worldwide"},
+ {"@type":"Person","@id":"https://mario-olivares.netlify.app/#mario","name":"Mario Olivares","jobTitle":"Senior Frontend Developer","sameAs":["https://www.linkedin.com/in/mario-olivares-web-ui"]}
+]}
+</script>
+<style>
+:root{
+  --bg:#0a0a0f; --bg2:#12121a; --ink:#f3f1ea; --ink2:#a7a5b3; --line:rgba(243,241,234,.12);
+  --lime:#d4ff3a; --violet:#8b5cff; --pink:#ff4fa3;
+  --serif:"Instrument Serif",Georgia,serif; --sans:"Space Grotesk",system-ui,sans-serif;
+  --r:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+::selection{background:var(--lime);color:#000}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:16px;z-index:99;background:var(--lime);color:#000;padding:8px 12px;border-radius:8px}
+
+/* grain */
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.07;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* cursor glow */
+.glow{position:fixed;width:520px;height:520px;border-radius:50%;pointer-events:none;z-index:0;left:0;top:0;
+  background:radial-gradient(circle,rgba(139,92,255,.22),transparent 65%);transform:translate(-50%,-50%);transition:opacity .4s}
+
+/* nav */
+header{position:fixed;inset:0 0 auto;z-index:40;transition:background .3s,backdrop-filter .3s}
+header.scrolled{background:rgba(10,10,15,.7);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;text-decoration:none;letter-spacing:-.02em}
+.logo i{width:12px;height:12px;border-radius:50%;background:var(--lime);}
+.nav ul{display:flex;gap:28px;list-style:none;font-size:15px;color:var(--ink2)}
+.nav ul a{text-decoration:none;transition:color .2s}.nav ul a:hover{color:var(--ink)}
+.navr{display:flex;align-items:center;gap:10px}
+.langs{display:flex;border:1px solid var(--line);border-radius:99px;padding:3px}
+.langs button{background:none;border:0;color:var(--ink2);font:500 13px var(--sans);padding:5px 9px;border-radius:99px;cursor:pointer;min-width:36px;min-height:30px}
+.langs button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+@media(max-width:860px){.nav ul{display:none}}
+
+/* buttons */
+.btn{--x:0px;--y:0px;display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:99px;font:600 16px var(--sans);text-decoration:none;cursor:pointer;border:0;
+  transform:translate(var(--x),var(--y));transition:transform .25s cubic-bezier(.2,.8,.2,1),background .2s,box-shadow .3s;position:relative}
+.btn-main{background:var(--lime);color:#0a0a0f}
+.btn-main:hover{background:#e4ff7a}
+.btn-ghost{border:1px solid var(--line);color:var(--ink)}.btn-ghost:hover{background:rgba(255,255,255,.06)}
+.btn svg{width:18px;height:18px;transition:transform .3s}.btn:hover svg{transform:translateX(4px)}
+.btn-sm{padding:10px 18px;font-size:14px}
+:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:grid;align-items:center;padding:120px 0 80px;overflow:hidden}
+#radar{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.hero .wrap{position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:14px;color:var(--ink2);border:1px solid var(--line);padding:7px 14px;border-radius:99px;background:rgba(10,10,15,.5);backdrop-filter:blur(6px)}
+.eyebrow b{width:7px;height:7px;border-radius:50%;background:var(--lime)}
+h1{font-size:clamp(52px,10.5vw,148px);line-height:.9;letter-spacing:-.045em;font-weight:700;margin:26px 0 28px}
+h1 em,h2 em{font-family:var(--serif);font-weight:400;font-style:italic;letter-spacing:-.02em}
+h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em}
+h1 .w>span{display:inline-block;transform:translateY(110%);animation:rise 1s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes rise{to{transform:none}}
+.grad{color:var(--lime)}
+.lede{max-width:560px;font-size:clamp(18px,2vw,21px);color:var(--ink2);opacity:0;animation:fade 1s .9s forwards}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px;opacity:0;animation:fade 1s 1.1s forwards}
+@keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.scrollhint{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:2;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink2);display:flex;flex-direction:column;align-items:center;gap:10px}
+.scrollhint i{width:1px;height:40px;background:linear-gradient(var(--ink2),transparent);animation:drip 2s infinite}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* marquee */
+.marquee{border-block:1px solid var(--line);overflow:hidden;padding:22px 0;background:var(--bg2)}
+.track{display:flex;gap:48px;width:max-content;animation:mq 32s linear infinite;font-size:clamp(22px,3vw,34px);font-weight:500;letter-spacing:-.02em}
+.track span{display:flex;align-items:center;gap:48px;white-space:nowrap}
+.track span::after{content:"✦";color:var(--lime);font-size:.7em}
+.track em{font-family:var(--serif);color:var(--ink2)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+section{position:relative;z-index:1}
+.sec{padding:clamp(90px,12vw,150px) 0}
+.kicker{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--lime);margin-bottom:18px;display:block}
+h2{font-size:clamp(38px,6vw,78px);line-height:.98;letter-spacing:-.04em;font-weight:700;max-width:14ch}
+.sub{color:var(--ink2);max-width:540px;margin-top:20px;font-size:19px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(40px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+
+/* pillars */
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:64px}
+@media(max-width:900px){.pillars{grid-template-columns:1fr}}
+.card{--mx:50%;--my:50%;position:relative;border:1px solid var(--line);border-radius:var(--r);padding:34px 30px 32px;background:var(--bg2);overflow:hidden;transition:transform .4s cubic-bezier(.2,.8,.2,1),border-color .3s}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(400px circle at var(--mx) var(--my),rgba(212,255,58,.12),transparent 45%);opacity:0;transition:opacity .3s}
+.card:hover::before{opacity:1}.card:hover{border-color:rgba(212,255,58,.35);transform:translateY(-6px)}
+.card .n{font-family:var(--serif);font-style:italic;font-size:64px;line-height:1;color:var(--lime)}
+.card h3{font-size:25px;letter-spacing:-.02em;margin:22px 0 10px}
+.card p{color:var(--ink2)}
+.card ul{margin-top:18px;list-style:none;display:grid;gap:8px;font-size:15px}
+.card li{display:flex;gap:10px}.card li::before{content:"→";color:var(--lime)}
+.viz{height:120px;margin:-6px -6px 0;border-radius:14px;background:#0d0d14;border:1px solid var(--line);position:relative;overflow:hidden}
+/* viz 1: morphing blob */
+.blob{position:absolute;width:90px;height:90px;left:50%;top:50%;translate:-50% -50%;background:conic-gradient(from 0deg,var(--lime),var(--violet),var(--pink),var(--lime));border-radius:42% 58% 63% 37%/45% 38% 62% 55%;animation:morph 6s ease-in-out infinite,spin 12s linear infinite;filter:blur(1px)}
+@keyframes morph{50%{border-radius:63% 37% 41% 59%/58% 63% 37% 42%}}@keyframes spin{to{rotate:360deg}}
+/* viz 2: search bar typing */
+.sbar{position:absolute;left:18px;right:18px;top:24px;height:38px;border-radius:99px;background:#1b1b26;border:1px solid var(--line);display:flex;align-items:center;padding:0 14px;gap:10px;font-size:14px}
+.sbar svg{width:16px;height:16px;flex:none;stroke:var(--ink2)}
+.typed{white-space:nowrap;overflow:hidden;border-right:2px solid var(--lime);width:0;animation:type 4s steps(26) infinite}
+@keyframes type{0%{width:0}55%,85%{width:26ch}100%{width:0}}
+.res{position:absolute;left:18px;right:18px;top:74px;height:28px;border-radius:8px;background:linear-gradient(90deg,rgba(212,255,58,.25),transparent);display:flex;align-items:center;padding:0 10px;font-size:12px;color:var(--lime);opacity:0;animation:pop 4s infinite}
+@keyframes pop{0%,55%{opacity:0;transform:translateY(6px)}62%,88%{opacity:1;transform:none}100%{opacity:0}}
+/* viz 3: bars */
+.bars{position:absolute;inset:auto 18px 18px;display:flex;align-items:flex-end;gap:8px;height:80px}
+.bars i{flex:1;background:linear-gradient(var(--lime),rgba(212,255,58,.15));border-radius:6px 6px 2px 2px;transform-origin:bottom;animation:grow 3s ease-in-out infinite alternate}
+@keyframes grow{from{transform:scaleY(.25)}}
+
+/* SERP demo */
+.serp-wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+@media(max-width:900px){.serp-wrap{grid-template-columns:1fr;gap:40px}}
+.serp{border:1px solid var(--line);border-radius:var(--r);background:#f7f6f2;color:#1a1a1a;padding:22px;box-shadow:0 30px 60px -20px rgba(0,0,0,.6);position:relative}
+.serp .q{display:flex;align-items:center;gap:10px;border:1px solid #ddd;border-radius:99px;padding:10px 16px;font-size:15px;background:#fff}
+.serp .q svg{width:16px;height:16px;stroke:#666}
+.serp ol{list-style:none;margin-top:18px;position:relative;height:300px}
+.serp li{position:absolute;left:0;right:0;padding:12px 14px;border-radius:12px;transition:top .9s cubic-bezier(.6,0,.2,1),background .5s,box-shadow .5s}
+.serp li small{display:block;font-size:12px;color:#5f6368}
+.serp li b{display:block;color:#1a0dab;font-weight:500;font-size:17px}
+.serp li span{font-size:13px;color:#4d5156}
+.serp li.you{background:#fff;outline:2px solid #0a0a0f;box-shadow:0 10px 30px -10px rgba(0,0,0,.25)}
+.serp li.you b{color:#0a0a0f;font-weight:700}
+.serp .tag{position:absolute;top:-12px;right:18px;background:var(--lime);color:#000;font-size:12px;font-weight:700;padding:4px 10px;border-radius:99px}
+.note{font-size:13px;color:var(--ink2);margin-top:14px}
+
+/* case */
+.case{display:grid;grid-template-columns:1.1fr 1fr;border:1px solid var(--line);border-radius:28px;overflow:hidden;margin-top:56px;background:var(--bg2)}
+@media(max-width:900px){.case{grid-template-columns:1fr}}
+.case-vis{position:relative;min-height:340px;background:linear-gradient(135deg,#0b4fb3,#2d8bff 60%,#ff8a1f);display:grid;place-items:center;overflow:hidden}
+.mock{width:78%;aspect-ratio:16/10;background:#fff;border-radius:12px;box-shadow:0 30px 70px -20px rgba(0,0,0,.6);transform:perspective(900px) rotateY(-14deg) rotateX(6deg);transition:transform .8s cubic-bezier(.2,.8,.2,1);overflow:hidden;display:flex;flex-direction:column}
+.case:hover .mock{transform:perspective(900px) rotateY(0) rotateX(0) scale(1.03)}
+.mock .bar{height:18px;background:#eef0f4;display:flex;gap:5px;align-items:center;padding-left:8px}.mock .bar i{width:6px;height:6px;border-radius:50%;background:#c9ccd3}
+.mock .hd{flex:1;background:linear-gradient(120deg,#0b4fb3,#123b7a);color:#fff;padding:7% 8%;display:flex;flex-direction:column;justify-content:center;gap:6px}
+.mock .hd b{font-size:clamp(13px,1.8vw,22px);line-height:1.05;text-transform:uppercase;letter-spacing:-.01em}
+.mock .hd span{display:inline-block;background:#ff8a1f;width:40%;height:12px;border-radius:99px}
+.mock .hd em{width:70%;height:5px;background:rgba(255,255,255,.4);border-radius:9px;font-style:normal}
+.case-txt{padding:clamp(28px,4vw,52px)}
+.case-txt h3{font-size:clamp(28px,3.4vw,40px);letter-spacing:-.03em;line-height:1.05;margin:10px 0 16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 28px}
+.chips span{font-size:13px;border:1px solid var(--line);padding:6px 12px;border-radius:99px;color:var(--ink2)}
+
+/* process */
+.steps{margin-top:60px;border-top:1px solid var(--line)}
+.step{display:grid;grid-template-columns:120px 1fr 1.3fr;gap:24px;padding:34px 0;border-bottom:1px solid var(--line);align-items:baseline;transition:padding .4s}
+.step:hover{padding-left:14px}
+.step .n{font-family:var(--serif);font-style:italic;font-size:44px;color:var(--ink2);transition:color .3s}
+.step:hover .n{color:var(--lime)}
+.step h3{font-size:clamp(22px,2.6vw,30px);letter-spacing:-.02em}
+.step p{color:var(--ink2)}
+@media(max-width:760px){.step{grid-template-columns:1fr;gap:6px}}
+
+/* about */
+.about{display:grid;grid-template-columns:auto 1fr;gap:clamp(30px,6vw,80px);align-items:center}
+@media(max-width:760px){.about{grid-template-columns:1fr}}
+.avatar{width:clamp(180px,22vw,260px);aspect-ratio:1;border-radius:50%;position:relative;display:grid;place-items:center;font-family:var(--serif);font-style:italic;font-size:clamp(70px,9vw,110px);color:#0a0a0f}
+.avatar::before{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(var(--lime),var(--violet),var(--pink),var(--lime));animation:spin 10s linear infinite}
+.avatar span{position:relative}
+.about p{color:var(--ink2);font-size:19px;max-width:620px;margin-top:18px}
+.about p strong{color:var(--ink);font-weight:500}
+
+/* contact */
+.contact{border:1px solid var(--line);border-radius:32px;padding:clamp(28px,6vw,72px);background:radial-gradient(800px 400px at 100% 0,rgba(139,92,255,.25),transparent 60%),radial-gradient(600px 300px at 0 100%,rgba(212,255,58,.12),transparent 60%),var(--bg2);display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(30px,5vw,70px)}
+@media(max-width:900px){.contact{grid-template-columns:1fr}}
+form{display:grid;gap:16px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media(max-width:560px){.row{grid-template-columns:1fr}}
+label{display:block;font-size:14px;color:var(--ink2);margin-bottom:7px}
+input,textarea,select{width:100%;background:rgba(10,10,15,.6);border:1px solid var(--line);border-radius:14px;padding:14px 16px;color:var(--ink);font:16px var(--sans);transition:border-color .2s,box-shadow .2s}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--lime);box-shadow:0 0 0 4px rgba(212,255,58,.15)}
+textarea{resize:vertical;min-height:120px}
+.hp{display:none}
+.mail{margin-top:26px;font-size:15px;color:var(--ink2)}.mail a{color:var(--lime)}
+
+footer{padding:50px 0 60px;color:var(--ink2);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:30px}
+.big{font-size:clamp(60px,15vw,220px);font-weight:700;letter-spacing:-.06em;line-height:.85;text-align:center;padding:40px 0 10px;
+  color:var(--ink);opacity:.06;user-select:none}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  h1 .w>span{transform:none}.rv{opacity:1;transform:none}.track{animation:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main" data-i="skip">Saltar al contenido</a>
+<div class="glow" aria-hidden="true"></div>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#top" class="logo"><i></i>Mario Olivares</a>
+    <ul>
+      <li><a href="#que" data-i="n1">Qué hago</a></li>
+      <li><a href="#caso" data-i="n2">Caso real</a></li>
+      <li><a href="#proceso" data-i="n3">Proceso</a></li>
+      <li><a href="#sobre" data-i="n4">Sobre mí</a></li>
+    </ul>
+    <div class="navr">
+      <div class="langs" role="group" aria-label="Idioma">
+        <button type="button" data-l="es" aria-pressed="true">ES</button>
+        <button type="button" data-l="pt" aria-pressed="false">PT</button>
+        <button type="button" data-l="en" aria-pressed="false">EN</button>
+      </div>
+      <a href="#contacto" class="btn btn-main btn-sm" data-i="navcta">Hablemos</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <canvas id="radar" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <span class="eyebrow"><b></b><span data-i="eye">Landing pages · Diseño · SEO</span></span>
+    <h1 aria-label="Que te encuentren.">
+      <span class="w"><span data-i="h1a">Que te</span></span><br>
+      <span class="w"><span class="grad" style="animation-delay:.15s"><em data-i="h1b">encuentren.</em></span></span>
+    </h1>
+    <p class="lede" data-i="lede">Diseño landing pages con looks espectaculares y animaciones que se sienten vivas, construidas para que Google las entienda y tus clientes te elijan.</p>
+    <div class="cta">
+      <a href="#contacto" class="btn btn-main mag"><span data-i="cta1">Quiero mi landing</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a href="#caso" class="btn btn-ghost mag" data-i="cta2">Ver un caso real</a>
+    </div>
+  </div>
+  <div class="scrollhint" aria-hidden="true"><span>scroll</span><i></i></div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Diseño <em>espectacular</em></span><span>Animaciones</span><span>SEO técnico</span><span>Google <em>Business</em></span><span>Velocidad</span><span>Bilingüe</span><span>Formularios que llegan</span>
+    <span>Diseño <em>espectacular</em></span><span>Animaciones</span><span>SEO técnico</span><span>Google <em>Business</em></span><span>Velocidad</span><span>Bilingüe</span><span>Formularios que llegan</span>
+  </div>
+</div>
+
+<section class="sec" id="que">
+  <div class="wrap">
+    <span class="kicker rv" data-i="k1">Qué hago</span>
+    <h2 class="rv"><span data-i="h2a">Una página que</span> <em data-i="h2b">enamora</em> <span data-i="h2c">y que se encuentra.</span></h2>
+    <p class="sub rv" data-i="sub1">La mayoría de los sitios elige: bonito o bien posicionado. Yo no elijo. Tres cosas, hechas a mano, en una sola entrega.</p>
+    <div class="pillars">
+      <article class="card rv">
+        <div class="viz"><div class="blob"></div></div>
+        <h3 data-i="p1t">Looks espectaculares</h3>
+        <p data-i="p1d">Diseño a medida con identidad propia, nada de plantillas. Animaciones suaves que guían la mirada hacia el botón de llamar.</p>
+        <ul><li data-i="p1a">Animaciones y micro-interacciones</li><li data-i="p1b">Modo claro/oscuro, móvil primero</li></ul>
+      </article>
+      <article class="card rv" style="transition-delay:.1s">
+        <div class="viz"><div class="sbar"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><span class="typed" data-i="p2q">reparación aire acondicionado</span></div><div class="res" data-i="p2r">★ Tu negocio — tunegocio.com</div></div>
+        <h3 data-i="p2t">Hecha para Google</h3>
+        <p data-i="p2d">SEO técnico desde la primera línea: datos estructurados, sitemap, velocidad, versiones por idioma y textos con las palabras que usa tu cliente.</p>
+        <ul><li data-i="p2a">Schema.org, hreflang, sitemap</li><li data-i="p2b">Guía de Google Business Profile</li></ul>
+      </article>
+      <article class="card rv" style="transition-delay:.2s">
+        <div class="viz"><div class="bars"><i style="animation-delay:0s"></i><i style="animation-delay:.3s"></i><i style="animation-delay:.6s"></i><i style="animation-delay:.9s"></i><i style="animation-delay:1.2s"></i><i style="animation-delay:1.5s"></i></div></div>
+        <h3 data-i="p3t">Publicada y medida</h3>
+        <p data-i="p3d">Te la entrego en línea, con tu dominio, formulario que llega a tu correo y analítica para saber de dónde vienen los clientes.</p>
+        <ul><li data-i="p3a">Hosting, dominio y HTTPS</li><li data-i="p3b">Clics a llamar, WhatsApp y formulario</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap serp-wrap">
+    <div>
+      <span class="kicker rv" data-i="k2">El objetivo</span>
+      <h2 class="rv"><span data-i="s1">Subir donde</span> <em data-i="s2">te buscan.</em></h2>
+      <p class="sub rv" data-i="s3">Tu cliente no escribe tu nombre: escribe su problema. Mi trabajo es que, cuando lo haga, tu negocio esté ahí con una página que convierta la visita en llamada.</p>
+    </div>
+    <div class="rv">
+      <div class="serp" id="serp">
+        <span class="tag" data-i="tag">Tu negocio</span>
+        <div class="q"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><span data-i="q">reparación aire acondicionado cerca</span></div>
+        <ol>
+          <li data-k="a"><small>directorio.com</small><b>Los 10 mejores técnicos</b><span>Listado genérico…</span></li>
+          <li data-k="b"><small>otraempresa.com</small><b>Servicio técnico 24h</b><span>Página lenta, sin móvil…</span></li>
+          <li data-k="c"><small>anuncios.com</small><b>Clasificados de servicios</b><span>Resultados mezclados…</span></li>
+          <li data-k="you" class="you"><small>tunegocio.com</small><b data-i="yt">Tu negocio — Llámanos 24/7</b><span data-i="yd">Estimado gratis · Hablamos tu idioma</span></li>
+        </ol>
+      </div>
+      <p class="note" data-i="note">Ilustración. Ningún profesional honesto puede garantizar el puesto #1; sí puede hacer todo lo que Google premia.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="caso" style="padding-top:0">
+  <div class="wrap">
+    <span class="kicker rv" data-i="k3">Caso real</span>
+    <h2 class="rv"><span data-i="c1">Del cero a</span> <em data-i="c2">estar en el mapa.</em></h2>
+    <div class="case rv">
+      <div class="case-vis"><div class="mock"><div class="bar"><i></i><i></i><i></i></div><div class="hd"><b>AC Repair<br>Broward &amp; Miami-Dade</b><em></em><span></span></div></div></div>
+      <div class="case-txt">
+        <span class="kicker">J&amp;Y Cool Solutions LLC · Florida, USA</span>
+        <h3 data-i="ct">Landing bilingüe para una empresa de aire acondicionado</h3>
+        <p style="color:var(--ink2)" data-i="cd">Diseño propio con modo oscuro, un toque para llamar desde cualquier parte de la página, datos estructurados de negocio local, versión en español con su propia URL indexable y medición de cada clic a llamada, WhatsApp y formulario.</p>
+        <div class="chips"><span>HTML/CSS/JS</span><span>Schema.org</span><span>hreflang EN/ES</span><span>GA4</span><span>Netlify Forms</span></div>
+        <a class="btn btn-ghost mag" href="https://jycoolsolutionsllc.com" target="_blank" rel="noopener"><span data-i="cv">Ver el sitio</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="proceso" style="padding-top:0">
+  <div class="wrap">
+    <span class="kicker rv" data-i="k4">Proceso</span>
+    <h2 class="rv"><span data-i="pr1">Simple, claro,</span> <em data-i="pr2">rápido.</em></h2>
+    <div class="steps">
+      <div class="step rv"><span class="n">01</span><h3 data-i="st1">Conversamos</h3><p data-i="sd1">Me cuentas tu negocio, a quién le vendes y cómo te buscan. Defino las palabras clave y el mensaje.</p></div>
+      <div class="step rv"><span class="n">02</span><h3 data-i="st2">Diseño</h3><p data-i="sd2">Te muestro la propuesta visual con animaciones reales, no capturas. Ajustamos hasta que te encante.</p></div>
+      <div class="step rv"><span class="n">03</span><h3 data-i="st3">Construyo y publico</h3><p data-i="sd3">Código limpio y rápido, SEO técnico, formulario y analítica. En línea con tu dominio.</p></div>
+      <div class="step rv"><span class="n">04</span><h3 data-i="st4">Te hacen visible</h3><p data-i="sd4">Te guío con Google Search Console y Google Business Profile para que empiecen a llegar las búsquedas.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="sobre" style="padding-top:0">
+  <div class="wrap about">
+    <div class="avatar rv" aria-hidden="true"><span>MO</span></div>
+    <div>
+      <span class="kicker rv" data-i="k5">Sobre mí</span>
+      <h2 class="rv"><span data-i="ab1">Un programador</span> <em data-i="ab2">obsesionado con el detalle.</em></h2>
+      <p class="rv" data-i="ab3">Soy Mario Olivares, desarrollador Frontend Senior. Vengo de construir interfaces complejas para plataformas fintech y de salud, con Angular, arquitectura de componentes y estado a escala. Ese mismo rigor lo pongo ahora en páginas para negocios que necesitan ser encontrados.</p>
+      <p class="rv"><a href="https://www.linkedin.com/in/mario-olivares-web-ui" target="_blank" rel="noopener" style="color:var(--lime)">LinkedIn ↗</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contacto" style="padding-top:0">
+  <div class="wrap">
+    <div class="contact rv">
+      <div>
+        <span class="kicker" data-i="k6">Contacto</span>
+        <h2><span data-i="fo1">¿Listo para que</span> <em data-i="fo2">te encuentren?</em></h2>
+        <p class="sub" data-i="fo3">Cuéntame de tu negocio. Te respondo con una propuesta concreta, sin compromiso.</p>
+        <p class="mail"><span data-i="fo4">O escríbeme directo:</span> <a href="mailto:meolivares06@gmail.com">meolivares06@gmail.com</a></p>
+      </div>
+      <form name="contacto" method="POST" action="/gracias.html" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contacto">
+        <input type="hidden" name="idioma" id="fLang" value="es">
+        <p class="hp"><label>No llenar <input name="bot-field"></label></p>
+        <div class="row">
+          <div><label for="nombre" data-i="l1">Nombre</label><input id="nombre" name="nombre" required autocomplete="name"></div>
+          <div><label for="email" data-i="l2">Email</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+        </div>
+        <div class="row">
+          <div><label for="negocio" data-i="l3">Tu negocio</label><input id="negocio" name="negocio" autocomplete="organization"></div>
+          <div><label for="whatsapp" data-i="l4">WhatsApp (opcional)</label><input id="whatsapp" name="whatsapp" type="tel" autocomplete="tel"></div>
+        </div>
+        <div><label for="sitio" data-i="l5">¿Ya tienes sitio web?</label>
+          <select id="sitio" name="sitio"><option data-i="o1">No, empiezo de cero</option><option data-i="o2">Sí, pero quiero renovarlo</option><option data-i="o3">Sí, pero nadie me encuentra</option></select></div>
+        <div><label for="mensaje" data-i="l6">Cuéntame qué necesitas</label><textarea id="mensaje" name="mensaje" required></textarea></div>
+        <button class="btn btn-main mag" type="submit" style="justify-self:start"><span data-i="send">Enviar mensaje</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="big" aria-hidden="true">encontrado.</div>
+<footer><div class="wrap"><span>© <span id="yr">2026</span> Mario Olivares</span><span data-i="ft">Landing pages que se encuentran.</span></div></footer>
+
+<script>
+const T={
+es:{},
+pt:{skip:"Pular para o conteúdo",n1:"O que faço",n2:"Caso real",n3:"Processo",n4:"Sobre mim",navcta:"Vamos conversar",eye:"Landing pages · Design · SEO",h1a:"Que te",h1b:"encontrem.",lede:"Crio landing pages com visual espetacular e animações que parecem vivas, feitas para o Google entender e seus clientes escolherem você.",cta1:"Quero minha landing",cta2:"Ver um caso real",k1:"O que faço",h2a:"Uma página que",h2b:"encanta",h2c:"e que é encontrada.",sub1:"A maioria dos sites escolhe: bonito ou bem posicionado. Eu não escolho. Três coisas, feitas à mão, numa só entrega.",p1t:"Visual espetacular",p1d:"Design sob medida com identidade própria, nada de templates. Animações suaves que guiam o olhar até o botão de ligar.",p1a:"Animações e micro-interações",p1b:"Modo claro/escuro, mobile first",p2q:"conserto de ar-condicionado",p2r:"★ Seu negócio — seunegocio.com",p2t:"Feita para o Google",p2d:"SEO técnico desde a primeira linha: dados estruturados, sitemap, velocidade, versões por idioma e textos com as palavras que seu cliente usa.",p2a:"Schema.org, hreflang, sitemap",p2b:"Guia do Perfil da Empresa no Google",p3t:"Publicada e medida",p3d:"Entrego no ar, com seu domínio, formulário que chega no seu e-mail e analytics para saber de onde vêm os clientes.",p3a:"Hospedagem, domínio e HTTPS",p3b:"Cliques para ligar, WhatsApp e formulário",k2:"O objetivo",s1:"Subir onde",s2:"te procuram.",s3:"Seu cliente não digita seu nome: digita o problema dele. Meu trabalho é que, quando ele fizer isso, seu negócio esteja lá com uma página que transforme a visita em ligação.",tag:"Seu negócio",q:"conserto de ar-condicionado perto",yt:"Seu negócio — Ligue 24/7",yd:"Orçamento grátis · Falamos sua língua",note:"Ilustração. Nenhum profissional honesto pode garantir a posição #1; pode, sim, fazer tudo o que o Google valoriza.",k3:"Caso real",c1:"Do zero a",c2:"estar no mapa.",ct:"Landing bilíngue para uma empresa de ar-condicionado",cd:"Design próprio com modo escuro, um toque para ligar de qualquer parte da página, dados estruturados de negócio local, versão em espanhol com URL própria indexável e medição de cada clique para ligação, WhatsApp e formulário.",cv:"Ver o site",k4:"Processo",pr1:"Simples, claro,",pr2:"rápido.",st1:"Conversamos",sd1:"Você me conta do seu negócio, para quem vende e como te procuram. Defino as palavras-chave e a mensagem.",st2:"Design",sd2:"Mostro a proposta visual com animações reais, não prints. Ajustamos até você amar.",st3:"Construo e publico",sd3:"Código limpo e rápido, SEO técnico, formulário e analytics. No ar com seu domínio.",st4:"Você fica visível",sd4:"Te guio no Google Search Console e no Perfil da Empresa no Google para as buscas começarem a chegar.",k5:"Sobre mim",ab1:"Um programador",ab2:"obcecado por detalhes.",ab3:"Sou Mario Olivares, desenvolvedor Frontend Sênior. Venho de construir interfaces complexas para plataformas de fintech e saúde, com Angular, arquitetura de componentes e estado em escala. Esse mesmo rigor eu coloco agora em páginas para negócios que precisam ser encontrados.",k6:"Contato",fo1:"Pronto para",fo2:"ser encontrado?",fo3:"Me conta do seu negócio. Respondo com uma proposta concreta, sem compromisso.",fo4:"Ou me escreva direto:",l1:"Nome",l2:"E-mail",l3:"Seu negócio",l4:"WhatsApp (opcional)",l5:"Já tem site?",o1:"Não, começo do zero",o2:"Sim, mas quero renovar",o3:"Sim, mas ninguém me encontra",l6:"Conte o que você precisa",send:"Enviar mensagem",ft:"Landing pages que são encontradas."},
+en:{skip:"Skip to content",n1:"What I do",n2:"Real case",n3:"Process",n4:"About",navcta:"Let's talk",eye:"Landing pages · Design · SEO",h1a:"Get",h1b:"found.",lede:"I design landing pages with spectacular looks and animations that feel alive, built so Google understands them and customers choose you.",cta1:"I want my landing",cta2:"See a real case",k1:"What I do",h2a:"A page that",h2b:"wows",h2c:"and gets found.",sub1:"Most sites pick one: beautiful or well ranked. I don't pick. Three things, handcrafted, in one delivery.",p1t:"Spectacular looks",p1d:"Custom design with its own identity, no templates. Smooth animations that guide the eye to the call button.",p1a:"Animations and micro-interactions",p1b:"Light/dark mode, mobile first",p2q:"ac repair near me",p2r:"★ Your business — yourbusiness.com",p2t:"Built for Google",p2d:"Technical SEO from line one: structured data, sitemap, speed, per-language versions and copy using the words your customers search.",p2a:"Schema.org, hreflang, sitemap",p2b:"Google Business Profile guidance",p3t:"Published and measured",p3d:"Delivered live on your domain, with a form that reaches your inbox and analytics that show where customers come from.",p3a:"Hosting, domain and HTTPS",p3b:"Call, WhatsApp and form clicks",k2:"The goal",s1:"Rise where",s2:"they search.",s3:"Your customer doesn't type your name: they type their problem. My job is to have your business there when they do, with a page that turns the visit into a call.",tag:"Your business",q:"ac repair near me",yt:"Your business — Call 24/7",yd:"Free estimate · We speak your language",note:"Illustration. No honest professional can guarantee #1; they can do everything Google rewards.",k3:"Real case",c1:"From zero to",c2:"on the map.",ct:"Bilingual landing for an air conditioning company",cd:"Custom design with dark mode, one tap to call from anywhere on the page, local business structured data, a Spanish version with its own indexable URL, and tracking of every call, WhatsApp and form click.",cv:"Visit the site",k4:"Process",pr1:"Simple, clear,",pr2:"fast.",st1:"We talk",sd1:"Tell me about your business, who you sell to and how they search. I define keywords and message.",st2:"Design",sd2:"I show you the visual proposal with real animations, not screenshots. We tweak until you love it.",st3:"I build and publish",sd3:"Clean, fast code, technical SEO, form and analytics. Live on your domain.",st4:"You get visible",sd4:"I guide you through Google Search Console and Google Business Profile so searches start arriving.",k5:"About",ab1:"A developer",ab2:"obsessed with detail.",ab3:"I'm Mario Olivares, a Senior Frontend Developer. I've built complex interfaces for fintech and healthcare platforms with Angular, component architecture and state at scale. I now bring that same rigor to pages for businesses that need to be found.",k6:"Contact",fo1:"Ready to",fo2:"get found?",fo3:"Tell me about your business. I'll reply with a concrete proposal, no strings attached.",fo4:"Or email me directly:",l1:"Name",l2:"Email",l3:"Your business",l4:"WhatsApp (optional)",l5:"Do you have a website?",o1:"No, starting from scratch",o2:"Yes, but I want a redesign",o3:"Yes, but nobody finds me",l6:"Tell me what you need",send:"Send message",ft:"Landing pages that get found."}
+};
+document.querySelectorAll('[data-i]').forEach(e=>T.es[e.dataset.i]=e.textContent);
+function setLang(l){
+  if(!T[l])l='es';
+  document.documentElement.lang=l==='pt'?'pt-BR':l;
+  document.querySelectorAll('[data-i]').forEach(e=>{const v=T[l][e.dataset.i];if(v!=null)e.textContent=v});
+  document.querySelector('h1').setAttribute('aria-label',T[l].h1a+' '+T[l].h1b);
+  document.querySelectorAll('.langs button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.l===l));
+  document.getElementById('fLang').value=l;
+  try{localStorage.setItem('mo-lang',l)}catch(e){}
+}
+document.querySelectorAll('.langs button').forEach(b=>b.onclick=()=>setLang(b.dataset.l));
+let init=null;try{init=localStorage.getItem('mo-lang')}catch(e){}
+const q=new URLSearchParams(location.search).get('lang');
+if(!init){const n=(navigator.language||'').slice(0,2);init=n==='pt'?'pt':n==='en'?'en':'es'}
+setLang(q||init);
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* header */
+const hdr=document.getElementById('hdr');
+addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>30),{passive:true});
+
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach(e=>io.observe(e));
+
+/* cursor glow + card spotlight + magnetic */
+const glow=document.querySelector('.glow');
+if(matchMedia('(pointer:fine)').matches&&!reduce){
+  addEventListener('pointermove',e=>{glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px'},{passive:true});
+  document.querySelectorAll('.card').forEach(c=>c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--mx',e.clientX-r.left+'px');c.style.setProperty('--my',e.clientY-r.top+'px')}));
+  document.querySelectorAll('.mag').forEach(b=>{
+    b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();b.style.setProperty('--x',(e.clientX-r.left-r.width/2)*.25+'px');b.style.setProperty('--y',(e.clientY-r.top-r.height/2)*.35+'px')});
+    b.addEventListener('pointerleave',()=>{b.style.setProperty('--x','0px');b.style.setProperty('--y','0px')});
+  });
+}else glow.style.display='none';
+
+/* SERP climb */
+(function(){
+  const lis=[...document.querySelectorAll('#serp li')],H=74;
+  let order=['a','b','c','you'],step=0;
+  const seq=[['a','b','c','you'],['a','b','you','c'],['a','you','b','c'],['you','a','b','c']];
+  function place(o){o.forEach((k,i)=>{lis.find(l=>l.dataset.k===k).style.top=i*H+'px'})}
+  place(reduce?seq[3]:seq[0]);
+  if(reduce)return;
+  let started=false;
+  new IntersectionObserver(es=>{if(es[0].isIntersecting&&!started){started=true;
+    setInterval(()=>{step=(step+1)%(seq.length+2);place(seq[Math.min(step,seq.length-1)])},1300)}},{threshold:.4}).observe(document.getElementById('serp'));
+})();
+
+/* radar canvas */
+(function(){
+  const c=document.getElementById('radar'),x=c.getContext('2d');let w,h,dpr,cx,cy,R,pts=[],a=0,pings=[];
+  function size(){dpr=Math.min(devicePixelRatio||1,2);w=c.clientWidth;h=c.clientHeight;c.width=w*dpr;c.height=h*dpr;x.setTransform(dpr,0,0,dpr,0,0);
+    cx=w>860?w*.74:w*.5;cy=h*.5;R=Math.max(w,h)*.55;
+    pts=Array.from({length:Math.round(w*h/9000)},()=>{const r=Math.sqrt(Math.random())*R,t=Math.random()*Math.PI*2;return{r,t,s:Math.random()*1.6+.4,lit:0}})}
+  size();addEventListener('resize',size);
+  function frame(){
+    x.clearRect(0,0,w,h);
+    // rings
+    x.lineWidth=1;
+    for(let i=1;i<=6;i++){x.strokeStyle=`rgba(243,241,234,${.07-i*.007})`;x.beginPath();x.arc(cx,cy,R*i/6,0,Math.PI*2);x.stroke()}
+    // sweep
+    const g=x.createConicGradient?x.createConicGradient(a-.9,cx,cy):null;
+    if(g){g.addColorStop(0,'rgba(212,255,58,0)');g.addColorStop(.14,'rgba(212,255,58,.16)');g.addColorStop(.143,'rgba(212,255,58,0)');x.fillStyle=g;x.beginPath();x.arc(cx,cy,R,0,Math.PI*2);x.fill()}
+    // points
+    for(const p of pts){
+      let d=((a-p.t)%(Math.PI*2)+Math.PI*2)%(Math.PI*2);
+      if(d<.05){p.lit=1;if(Math.random()<.012)pings.push({x:cx+Math.cos(p.t)*p.r,y:cy+Math.sin(p.t)*p.r,r:0})}
+      p.lit*=.985;
+      const px=cx+Math.cos(p.t)*p.r,py=cy+Math.sin(p.t)*p.r;
+      x.fillStyle=p.lit>.05?`rgba(212,255,58,${.15+p.lit*.85})`:'rgba(167,165,179,.22)';
+      x.beginPath();x.arc(px,py,p.s+(p.lit*1.4),0,Math.PI*2);x.fill();
+    }
+    for(const k of pings){k.r+=.8;x.strokeStyle=`rgba(139,92,255,${Math.max(0,1-k.r/50)})`;x.beginPath();x.arc(k.x,k.y,k.r,0,Math.PI*2);x.stroke()}
+    pings=pings.filter(k=>k.r<50);
+    // center
+    x.fillStyle='#d4ff3a';x.beginPath();x.arc(cx,cy,4,0,Math.PI*2);x.fill();
+    a+=.012;
+    if(!reduce)requestAnimationFrame(frame);
+  }
+  frame();
+  // fade canvas toward left for legibility
+  c.style.maskImage=c.style.webkitMaskImage='linear-gradient(90deg,transparent 0%,#000 55%)';
+  if(innerWidth<=860)c.style.maskImage=c.style.webkitMaskImage='linear-gradient(180deg,transparent,#000 40%,#000 70%,transparent)';
+})();
+</script>
+</body>
+</html>

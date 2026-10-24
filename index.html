@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YDQLSTHN2F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YDQLSTHN2F');
+</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mario Olivares | Landing pages espectaculares que Google encuentra</title>
@@ -476,6 +485,19 @@ if(matchMedia('(pointer:fine)').matches&&!reduce){
   // fade canvas toward left for legibility
   c.style.maskImage=c.style.webkitMaskImage='linear-gradient(90deg,transparent 0%,#000 55%)';
   if(innerWidth<=860)c.style.maskImage=c.style.webkitMaskImage='linear-gradient(180deg,transparent,#000 40%,#000 70%,transparent)';
+})();
+
+/* analytics events */
+(function(){
+  const g=(n,p)=>{try{gtag('event',n,Object.assign({site_language:document.documentElement.lang},p))}catch(e){}};
+  const f=document.querySelector('form[name=contacto]');
+  if(f)f.addEventListener('submit',()=>{if(f.checkValidity())g('generate_lead',{method:'form',has_site:document.getElementById('sitio').value})});
+  document.addEventListener('click',e=>{const a=e.target.closest('a');if(!a)return;const h=a.getAttribute('href')||'';
+    if(h.startsWith('mailto:'))g('email_click',{link_location:a.closest('section')?.id||'other'});
+    else if(h.includes('jycoolsolutionsllc.com'))g('case_study_click',{case:'jy-cool-solutions'});
+    else if(h.includes('linkedin.com'))g('linkedin_click');
+    else if(h==='#contacto')g('cta_click',{link_location:a.closest('section,header')?.id||'header'});
+  });
 })();
 </script>
 </body>
